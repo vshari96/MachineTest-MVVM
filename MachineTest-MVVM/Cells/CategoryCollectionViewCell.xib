@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="CategoryCollectionViewCell" translatesAutoresizingMaskIntoConstraints="NO" id="gTV-IL-0wX" customClass="CategoryCollectionViewCell" customModule="MachineTest_MVVM" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="90" height="100"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="90" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bgo-0y-RZD">
+                        <rect key="frame" x="5" y="0.0" width="80" height="80"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oVf-k0-QZO">
+                                <rect key="frame" x="15" y="15" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2Rv-k6-f1k"/>
+                                    <constraint firstAttribute="width" constant="50" id="Lwq-8L-UJe"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="oVf-k0-QZO" firstAttribute="centerY" secondItem="bgo-0y-RZD" secondAttribute="centerY" id="6xz-x2-FJg"/>
+                            <constraint firstItem="oVf-k0-QZO" firstAttribute="centerX" secondItem="bgo-0y-RZD" secondAttribute="centerX" id="i9Z-1O-yPC"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="40"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOj-ju-spV">
+                        <rect key="frame" x="5" y="80" width="80" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="bgo-0y-RZD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="38e-Qn-arw"/>
+                <constraint firstItem="dOj-ju-spV" firstAttribute="top" secondItem="bgo-0y-RZD" secondAttribute="bottom" id="Gz0-jS-PiA"/>
+                <constraint firstAttribute="trailing" secondItem="dOj-ju-spV" secondAttribute="trailing" constant="5" id="Rx9-Wc-Ewh"/>
+                <constraint firstAttribute="bottom" secondItem="dOj-ju-spV" secondAttribute="bottom" id="Skk-kL-L9G"/>
+                <constraint firstItem="bgo-0y-RZD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="mU0-BF-MQE"/>
+                <constraint firstAttribute="bottom" secondItem="bgo-0y-RZD" secondAttribute="bottom" constant="20" id="pWQ-fP-1SQ"/>
+                <constraint firstAttribute="trailing" secondItem="bgo-0y-RZD" secondAttribute="trailing" constant="5" id="qs4-vg-Cv5"/>
+                <constraint firstItem="dOj-ju-spV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="sBy-vO-K3i"/>
+            </constraints>
+            <size key="customSize" width="260" height="428"/>
+            <connections>
+                <outlet property="categoryImage" destination="oVf-k0-QZO" id="9qq-9b-rcS"/>
+                <outlet property="categoryName" destination="dOj-ju-spV" id="zNy-ku-bTq"/>
+            </connections>
+            <point key="canvasLocation" x="62.318840579710148" y="124.55357142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
